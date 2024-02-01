@@ -31,7 +31,8 @@ nav .router-link-active {
     color: var(--secondary-white);
 }
 
-nav a::after {
+nav a::after,
+.drawer a::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -44,6 +45,37 @@ nav a::after {
     transition: transform 0.2s ease-in-out;
 }
 
-nav .router-link-active::after {
+nav .router-link-active::after,
+.drawer .router-link-active::after {
     transform: scaleX(1);
+}
+
+.drawer {
+    height: 0;
+    visibility: collapse;
+    width: 100%;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1;
+    transition: height 0.2s ease-in-out;
+}
+
+.drawer.open {
+    height: 100%;
+    visibility: visible;
+}
+
+.drawer a {
+    color: var(--secondary-white);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 21px;
+    transition: color 0.2s ease-in-out;
+    width: 100%;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--lines);
+    position: relative;
 }

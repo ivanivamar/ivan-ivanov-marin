@@ -15,6 +15,7 @@
   "dependencies": {
     "firebase": "^10.7.2",
     "vue": "^3.4.15",
+    "vue-code-highlight": "^0.7.8",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {

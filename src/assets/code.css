@@ -1,0 +1,57 @@
+code-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    font-size: 16px;
+    font-weight: 450;
+    color: var(--secondary-white);
+}
+
+code-block line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    color: var(--secondary-white);
+}
+
+code-block line-number {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: var(--secondary-grey);
+}
+
+code-block comment {
+    color: var(--secondary-grey);
+}
+
+code-block declaration {
+    color: var(--secondary-blue);
+}
+
+code-block keyword {
+    color: var(--accent-teal);
+}
+
+code-block string,
+code-block .string {
+    color: var(--accent-red);
+    font-style: italic;
+}
+
+code-block number {
+    color: var(--accent-purple);
+}
+
+code-block operator {
+    color: var(--accent-red);
+}
+
+code-block punctuation {
+    color: var(--secondary-grey);
+}
+
+code-block .line-number {
+    color: var(--secondary-grey);
+}

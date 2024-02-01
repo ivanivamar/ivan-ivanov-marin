@@ -2,7 +2,7 @@
     font-size: 62px;
     font-style: normal;
     font-weight: 450;
-    line-height: normal;
+    line-height: 62px;
 }
 
 .subheadline {
@@ -31,4 +31,28 @@
     font-style: normal;
     font-weight: 450;
     line-height: normal;
+}
+
+@media screen and (max-width: 768px) {
+    .headline {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .subheadline {
+        font-size: 20px;
+    }
+
+    .body-text {
+        font-size: 16px;
+    }
+
+    .labels {
+        font-size: 14px;
+    }
+
+    .code-snippets {
+        font-size: 14px;
+    }
+
 }

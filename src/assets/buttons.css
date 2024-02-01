@@ -35,3 +35,23 @@
 .btn.outlined:hover {
     border-color: var(--secondary-white) - 50%;
 }
+
+.btn-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+    border: none;
+}
+
+.btn-icon.text {
+    background-color: transparent;
+    color: var(--secondary-grey);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-icon.text:hover,
+.btn-icon.text:focus {
+    color: var(--secondary-white);
+}

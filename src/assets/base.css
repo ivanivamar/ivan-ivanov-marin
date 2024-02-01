@@ -20,6 +20,28 @@
     --gradient-2: #43D9AD;
 }
 
+.color-orange {
+    color: var(--accent-orange);
+}
+.color-teal {
+    color: var(--accent-teal);
+}
+.color-red {
+    color: var(--accent-red);
+}
+.color-purple {
+    color: var(--accent-purple);
+}
+.color-grey {
+    color: var(--secondary-grey);
+}
+.color-teal {
+    color: var(--secondary-teal);
+}
+.color-blue {
+    color: var(--secondary-blue);
+}
+
 *,
 *::before,
 *::after {
@@ -32,6 +54,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--bg-color);
+    color: var(--secondary-white);
     font-family: "Fira Code", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -43,5 +66,7 @@ body {
 
 main {
     height: calc(100vh - 50px);
+    width: 100vw;
     overflow: auto;
 }
+
