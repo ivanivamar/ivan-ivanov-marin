@@ -1,6 +1,5 @@
-/* color palette from <https://github.com/vuejs/theme> */
 :root {
-    --bg-color: #010C15;
+    --bg-color: #011627;
     --surface-0: #01080E;
     --surface-1: #011627;
     --surface-2: #011221;
@@ -39,39 +38,10 @@ body {
     font-style: normal;
     font-size: 18px;
     line-height: normal;
+    overflow: hidden;
 }
 
-.headline {
-    font-size: 62px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: normal;
-}
-
-.subheadline {
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: normal;
-}
-
-.body-text {
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: normal;
-}
-
-.labels {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: normal;
-}
-
-.code-snippets {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: normal;
+main {
+    height: calc(100vh - 50px);
+    overflow: auto;
 }
