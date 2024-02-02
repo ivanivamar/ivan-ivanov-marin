@@ -1,7 +1,7 @@
 <template>
 	<nav class="hidden md:flex">
         <div class="left-nav">
-            <a href="/" style="width: 300px; text-align: left">ivan-ivanov</a>
+            <a href="/" class="w-19rem" style="text-align: left">ivan-ivanov</a>
 
             <div class="hug flex align-items-center">
                 <RouterLink to="/">_hello</RouterLink>
@@ -26,10 +26,10 @@
     </nav>
 
     <div class="drawer" :class="{ open: isMenuOpen }">
-        <RouterLink to="/">_hello</RouterLink>
-        <RouterLink to="/about">_about-me</RouterLink>
-        <RouterLink to="/projects">_projects</RouterLink>
-        <RouterLink to="/contact">_contact-me</RouterLink>
+        <RouterLink to="/" @click="isMenuOpen = false">_hello</RouterLink>
+        <RouterLink to="/about" @click="isMenuOpen = false">_about-me</RouterLink>
+        <RouterLink to="/projects" @click="isMenuOpen = false">_projects</RouterLink>
+        <RouterLink to="/contact" @click="isMenuOpen = false">_contact-me</RouterLink>
     </div>
 </template>
 

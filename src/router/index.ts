@@ -6,15 +6,19 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Ivan Ivanov Marin - Home',
       component: HomeView
     },
     {
       path: '/about',
-      name: 'about',
+      name: 'Ivan Ivanov Marin - About me',
       component: () => import('../views/AboutView.vue')
     }
   ]
+})
+router.beforeEach((to, from, next) => {
+  document.title = <string>to.name
+  next()
 })
 
 export default router

@@ -26,7 +26,7 @@
                     <declaration>const</declaration>
                     <keyword>githubLink</keyword>
                     =
-                    <a href="https://github.com/ivanivamar" target="_blank" class="string">"https://github.com/ivanivamar"</a>
+                    <a href="https://github.com/ivanivamar" target="_blank" class="string">"https://github.com/ivanivamar"</a>;
                 </line>
             </code-block>
         </section>

@@ -1,1 +1,0 @@
-import{_ as e,o as s,c as o,a}from"./index-dbvBNRUD.js";const t={},n={class:"about"},c=a("h1",null,"This is an about page",-1),i=[c];function _(r,u){return s(),o("div",n,[...i])}const d=e(t,[["render",_],["__file","C:/Users/ivan.ivanov/repos/ivan-ivanov-marin/src/views/AboutView.vue"]]);export{d as default};

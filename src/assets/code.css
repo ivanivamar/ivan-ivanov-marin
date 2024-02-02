@@ -17,7 +17,7 @@ code-block line {
 
 code-block line-number {
     display: flex;
-    gap: 8px;
+    gap: 24px;
     align-items: center;
     color: var(--secondary-grey);
 }
@@ -54,4 +54,13 @@ code-block punctuation {
 
 code-block .line-number {
     color: var(--secondary-grey);
+}
+
+.v-code-block--code pre {
+    color: var(--secondary-white);
+    background: transparent !important;
+}
+
+.hljs-comment {
+    color: var(--secondary-grey) !important;
 }
