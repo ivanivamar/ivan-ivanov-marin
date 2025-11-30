@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dist/ivan-ivanov-marin/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

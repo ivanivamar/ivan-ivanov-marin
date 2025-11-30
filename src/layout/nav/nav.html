@@ -1,0 +1,24 @@
+<nav class="hidden md:flex">
+    <div class="left-nav">
+        <a [routerLink]="['/hello']" class="home-link">{{ brand }}</a>
+        <div class="hug flex align-items-center">
+            @for (item of navItems; track item.label) {
+                <a [routerLink]="[item.path]" [routerLinkActive]="'active'">{{ item.label }}</a>
+            }
+        </div>
+    </div>
+    <a [routerLink]="[contactItem.path]" [routerLinkActive]="'active'">{{ contactItem.label }}</a>
+</nav>
+
+<nav class="flex md:hidden">
+    <a [routerLink]="['/hello']" class="home-link">{{ brand }}</a>
+    <button class="btn-icon text" (click)="toggleMenu()">
+        <i class="material-symbols-outlined">menu</i>
+    </button>
+</nav>
+
+<div class="drawer" [class.open]="isMenuOpen()">
+    @for (item of drawerItems(); track item.label) {
+        <a [routerLink]="[item.path]" [routerLinkActive]="'active'" (click)="closeMenu()">{{ item.label }}</a>
+    }
+</div>
