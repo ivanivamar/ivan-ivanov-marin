@@ -8,7 +8,11 @@
     "projects": {
         "ivan-ivanov-marin": {
             "projectType": "application",
-            "schematics": {},
+            "schematics": {
+                "@schematics/angular:component": {
+                    "style": "sass"
+                }
+            },
             "root": "",
             "sourceRoot": "src",
             "prefix": "app",

@@ -1,8 +1,10 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 import {Hello} from './hello/hello';
 import {About} from './about/about';
 import {Projects} from './projects/projects';
 import {Contact} from './contact/contact';
+import {WorkExperience} from './about/work-experience/work-experience';
+import {PersonalInfo} from './about/personal-info/personal-info';
 
 export const routes: Routes = [
     {
@@ -18,7 +20,17 @@ export const routes: Routes = [
     {
         path: 'about',
         component: About,
-        pathMatch: 'full'
+        children: [
+            {path: '', redirectTo: 'work-experience', pathMatch: 'full'},
+            {
+                path: 'work-experience',
+                component: WorkExperience,
+            },
+            {
+                path: 'personal-info',
+                component: PersonalInfo,
+            }
+        ]
     },
     {
         path: 'projects',
