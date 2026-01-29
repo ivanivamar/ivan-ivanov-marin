@@ -1,0 +1,63 @@
+<section class="container pb-5 flex flex-column gap-5 fadein animation-duration-1000">
+    <header class="flex flex-column gap-3 sticky bg-color pt-5" style="top: 28px;">
+        <button class="btn-icon text" [routerLink]="['/projects']">
+            <i class="material-symbols-rounded">arrow_back</i>
+        </button>
+
+        <h1 class="color-blue uppercase">
+            {{ title }}
+        </h1>
+    </header>
+
+    <ng-container>
+        @for (node of renderedNodes(); track $index) {
+            @if (node.tag === 'h1') {
+                <h1 class="color-blue">{{ node['text'] }}</h1>
+            }
+            @if (node.tag === 'h2') {
+                <h2 class="color-orange">{{ node['text'] }}</h2>
+            }
+            @if (node.tag === 'h3') {
+                <h3 class="color-red">{{ node['text'] }}</h3>
+            }
+            @if (node.tag === 'h4') {
+                <h4>{{ node['text'] }}</h4>
+            }
+            @if (node.tag === 'h5') {
+                <h5>{{ node['text'] }}</h5>
+            }
+            @if (node.tag === 'h6') {
+                <h6>{{ node['text'] }}</h6>
+            }
+
+            @if (node.tag === 'p') {
+                <p>{{ node['text'] }}</p>
+            }
+
+            @if (node.tag === 'ul') {
+                <ul>
+                    @for (it of node['items']; track $index) {
+                        <li>{{ it }}</li>
+                    }
+                </ul>
+            }
+
+            @if (node.tag === 'ol') {
+                <ol>
+                    @for (it of node['items']; track $index) {
+                        <li>{{ it }}</li>
+                    }
+                </ol>
+            }
+
+            @if (node.tag === 'pre') {
+                <pre><code>{{ node['text'] }}</code></pre>
+            }
+
+            @if (node.tag === 'img') {
+                <img [src]="'assets/projects/' + node['src']" [alt]="node['alt']" class="w-full md:w-8"
+                     style="border-radius: 18px"/>
+            }
+        }
+    </ng-container>
+</section>

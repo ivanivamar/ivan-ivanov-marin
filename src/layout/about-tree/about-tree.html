@@ -1,0 +1,5 @@
+<aside class="about-tree">
+    @for (node of options(); track node.title) {
+        <app-about-tree-node [node]="node" [level]="0" (onNodeClick)="onOptionClick($event)"></app-about-tree-node>
+    }
+</aside>

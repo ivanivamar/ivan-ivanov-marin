@@ -1,0 +1,29 @@
+@use '../../../styles/base' as *
+
+.about-tree-node
+    padding: 8px 16px
+    color: $secondary-grey
+    text-decoration: none
+    display: flex
+    align-items: center
+    gap: 8px
+    transition: color 0.2s ease-in-out
+    cursor: pointer
+    font-size: 16px
+    text-transform: lowercase
+
+    .expand-icon
+        font-size: 20px
+        transition: transform 0.2s ease-in-out
+
+    .folder-icon
+        font-size: 20px
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24
+
+    &:hover,
+    &.active
+        color: $secondary-white
+
+    &.active
+        .expand-icon
+            transform: rotate(90deg)
