@@ -5,6 +5,7 @@ import {Projects} from './projects/projects';
 import {Contact} from './contact/contact';
 import {WorkExperience} from './about/work-experience/work-experience';
 import {PersonalInfo} from './about/personal-info/personal-info';
+import { ProjectDetails } from './projects/project-details/project-details'
 
 export const routes: Routes = [
     {
@@ -34,8 +35,18 @@ export const routes: Routes = [
     },
     {
         path: 'projects',
-        component: Projects,
-        pathMatch: 'full'
+        children: [
+            {
+                // This route can be for the component that contains the provided HTML
+                path: '',
+                component: Projects,
+            },
+            {
+                // This route handles the navigation to project details
+                path: 'project-details/:title',
+                component: ProjectDetails,
+            }
+        ]
     },
     {
         path: 'contact',

@@ -18,7 +18,7 @@ import {TranslatePipe} from '@ngx-translate/core';
 export class Nav extends AppComponentBase {
     isMenuOpen = signal<boolean>(false);
 
-    readonly brand = 'ivan-ivanov';
+    readonly brand = 'ivan-ivanov-marin';
 
     readonly navItems = [
         { label: 'hello', path: '/hello' },
