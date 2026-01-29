@@ -13,7 +13,7 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
 export class Nav {
     isMenuOpen = signal<boolean>(false);
 
-    readonly brand = 'ivan-ivanov';
+    readonly brand = 'ivan-ivanov-marin';
 
     readonly navItems = [
         { label: '_hello', path: '/hello' },

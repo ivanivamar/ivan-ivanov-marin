@@ -1,4 +1,4 @@
-<div class="grid grid-nogutter p-5">
+<div class="grid grid-nogutter p-3 gap-3 md:gap-0 md:p-5">
     @for (project of projects; track project.title; let index = $index) {
         <div class="col-12 md:col-4">
             <div class="flex flex-column gap-3 px-2">
@@ -11,16 +11,14 @@
                 </span>
                 </header>
                 <div class="card">
-                    <div class="card-header" [style.background-image]="'url(' + project.image + ')'">
-                    </div>
-
+                    <div class="card-header" [style.background-image]="'url(' + project.image + ')'"></div>
                     <div class="card-body">
                         <span>
                             {{ project.description }}
                         </span>
-                        <button class="btn secondary">
+                        <a [routerLink]="['/projects/project-details', project.title]" class="btn secondary">
                             view-project
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

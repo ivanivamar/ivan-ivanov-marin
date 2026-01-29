@@ -14,6 +14,8 @@
     height: 40px
     font-size: 14px
     font-weight: 450
+    font-family: 'Fira Code', monospace
+    text-decoration: none
 
     &.primary
         background-color: $accent-orange
@@ -45,11 +47,13 @@
     transition: all 0.2s ease-in-out
     border: none
     cursor: pointer
+    width: fit-content
+    border-radius: 8px
 
     &.text
         background-color: transparent
-        color: $secondary-grey
+        color: $secondary-white
         transition: all 0.2s ease-in-out
 
         &:hover, &:focus
-            color: $secondary-white
+            background-color: rgba($secondary-white, 0.1)
