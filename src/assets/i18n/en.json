@@ -6,5 +6,14 @@
     "hello": "_hello",
     "about-me": "_about-me",
     "projects": "_projects",
-    "contact-me": "_contact-me"
+    "contact-me": "_contact-me",
+    "Project": "Project",
+    "Projects": "Projects",
+    "view-project": "view-project",
+    "projects.caae_description": "Migration of a Windows Forms application to a modern Angular web application.",
+    "projects.caae_technologies": "Angular, .NET, SharePoint Integration, RESTful Services",
+    "projects.provalliance_description": "Scheduler Angular application for managing appointments and resources.",
+    "projects.provalliance_technologies": "Angular, .NET, DevExtreme, RESTful Services",
+    "projects.sener_navigation_app_description": "Navigation app built with MAUI for logistics and transportation management.",
+    "projects.sener_navigation_app_technologies": "MAUI, .NET, Google Maps API, RESTful Services"
 }

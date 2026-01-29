@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit, signal} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {Nav} from '../layout/nav/nav';
 import {AppComponentBase} from '../shared/AppComponentBase';
@@ -7,9 +7,10 @@ import {AppComponentBase} from '../shared/AppComponentBase';
     selector: 'app-root',
     imports: [RouterOutlet, Nav],
     templateUrl: './app.html',
-    styleUrl: './app.css'
+    styleUrl: './app.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class App extends AppComponentBase {
+export class App extends AppComponentBase implements OnInit {
     protected readonly title = signal('ivan-ivanov-marin');
 
     ngOnInit() {

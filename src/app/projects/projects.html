@@ -1,10 +1,10 @@
-<div class="grid grid-nogutter p-3 gap-3 md:gap-0 md:p-5">
+<div class="grid grid-nogutter p-3 gap-3 md:gap-0 md:p-5 md:px-7">
     @for (project of projects; track project.title; let index = $index) {
-        <div class="col-12 md:col-4">
-            <div class="flex flex-column gap-3 px-2">
+        <div class="col-12 md:col-4 fadein animation-duration-1000">
+            <div class="flex flex-column gap-3 px-2 h-full">
                 <header class="flex align-items-center gap-3">
                     <h4 class="color-blue font-bold m-0">
-                        Project {{ index + 1 }}
+                        {{ 'Project' | translate }} {{ index + 1 }}
                     </h4>
                     <span class="color-grey">
                         // {{ project.title }}
@@ -14,11 +14,15 @@
                     <div class="card-header" [style.background-image]="'url(' + project.image + ')'"></div>
                     <div class="card-body">
                         <span>
-                            {{ project.description }}
+                            {{ project.description | translate }}
                         </span>
-                        <a [routerLink]="['/projects/project-details', project.title]" class="btn secondary">
-                            view-project
-                        </a>
+
+                        <span class="color-red text-base">
+                            {{ project.technologies | translate }}
+                        </span>
+                        <!--<a [routerLink]="['/projects/project-details', project.url]" class="btn secondary">
+                            {{ 'view-project' | translate }}
+                        </a>-->
                     </div>
                 </div>
             </div>

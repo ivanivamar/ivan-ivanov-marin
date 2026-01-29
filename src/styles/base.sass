@@ -15,6 +15,9 @@ $lines: #1E2D3D
 $gradient-1: #4D5BCE
 $gradient-2: #43D9AD
 
+.bg-color
+    background-color: $bg-color
+
 .color-orange
     color: $accent-orange
 
@@ -62,3 +65,25 @@ main
     height: calc(100vh - 50px)
     width: 100vw
     margin-top: 50px
+
+.container
+    max-width: 1320px
+    margin: 0 auto
+
+    @media screen and (max-width: 575px)
+        max-width: 100%
+
+    @media screen and (min-width: 576px)
+        max-width: 540px
+
+    @media screen and (min-width: 768px)
+        max-width: 720px
+
+    @media screen and (min-width: 992px)
+        max-width: 960px
+
+    @media screen and (min-width: 1200px)
+        max-width: 1140px
+
+    @media screen and (min-width: 1400px)
+        max-width: 1320px

@@ -41,6 +41,9 @@ nav
         display: flex
         flex: 1 1 0
 
+    .right-nav .menu
+        border-right: 1px solid $lines
+
     .home-link
         @include link-typography
         width: 304px
@@ -52,7 +55,6 @@ nav
 
         @media (max-width: 768px)
             width: 100%
-            border-right: none
             padding-left: 16px
 
     a

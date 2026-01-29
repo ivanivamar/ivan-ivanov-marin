@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router'
+import {AppComponentBase} from '../../shared/AppComponentBase';
+import {TranslatePipe} from '@ngx-translate/core';
 
 
 @Component({
@@ -7,31 +9,40 @@ import { RouterLink } from '@angular/router'
     templateUrl: './projects.html',
     styleUrl: './projects.css',
     imports: [
-        RouterLink
+        RouterLink,
+        TranslatePipe
     ]
 })
-export class Projects {
+export class Projects extends AppComponentBase {
     projects: IProject[] = [
         {
             title: '_caae',
+            url: 'caae',
             image: 'assets/projects/caae.png',
-            description: 'Migration of a Windows Forms application to a modern Angular web application.'
+            description: 'projects.caae_description',
+            technologies: 'projects.caae_technologies'
         },
         {
             title: '_provalliance',
+            url: 'provalliance',
             image: 'assets/projects/provalliance.png',
-            description: 'Scheduler Angular application for managing appointments and resources.'
+            description: 'projects.provalliance_description',
+            technologies: 'projects.provalliance_technologies'
         },
         {
             title: '_sener-navigation-app',
+            url: 'sener-navigation-app',
             image: 'assets/projects/senner.png',
-            description: 'Navigation app built with MAUI for logistics and transportation management.'
+            description: 'projects.sener_navigation_app_description',
+            technologies: 'projects.sener_navigation_app_technologies'
         },
     ];
 }
 
 export interface IProject {
     title: string;
+    url: string;
     image: string;
     description: string;
+    technologies: string;
 }
