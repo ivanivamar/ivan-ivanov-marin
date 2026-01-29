@@ -1,0 +1,36 @@
+<div
+    class="about-tree-node"
+    [class.active]="node().extended"
+    (click)="onNodeClick.emit(node())">
+    @if (node().children) {
+        <i class="material-symbols-rounded expand-icon"
+           [class.expanded]="node().extended">
+            chevron_right
+        </i>
+
+        <i class="material-symbols-rounded folder-icon">
+            folder
+        </i>
+    } @else {
+        <i class="material-symbols-rounded expand-icon"
+           style="visibility: collapse"
+           [class.expanded]="node().extended">
+            chevron_right
+        </i>
+        <i class="material-symbols-rounded folder-icon">
+            markdown
+        </i>
+    }
+
+    {{ node().title }}
+</div>
+
+@if (node().children && node().extended) {
+    @for (child of node().children; track child.title) {
+        <app-about-tree-node
+            [node]="child"
+            [level]="level() + 1"
+            (onNodeClick)="onNodeClick.emit($event)">
+        </app-about-tree-node>
+    }
+}
