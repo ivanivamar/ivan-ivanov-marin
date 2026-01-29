@@ -1,0 +1,10 @@
+{
+    "hello.greeting": "Hola, me llamo",
+    "hello.job-title": "desarrollador Front-end",
+    "hello.about-me": "Soy desarrollador front-end con más de 6 años de experiencia en desarrollo web. Me apasiona crear sitios web atractivos y funcionales.",
+    "hello.contact-me": "Actualmente estoy buscando un nuevo reto. Si tienes alguna pregunta, no dudes en contactarme. Puedes encontrar más información en la sección \"Sobre mí\" o en mi perfil de LinkedIn a continuación.",
+    "hello": "_hola",
+    "about-me": "_sobre-mi",
+    "projects": "_proyectos",
+    "contact-me": "_contacto"
+}

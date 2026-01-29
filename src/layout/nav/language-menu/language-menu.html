@@ -1,0 +1,15 @@
+<div class="menu" [class.active]="showMenu()">
+    <button class="menu-button" (click)="toggleMenu()">
+        <img [src]="'assets/' + selectedLanguage + '.png'" [alt]="selectedLanguage + ' flag'"/>
+        <i class="material-symbols-rounded">chevron_forward</i>
+    </button>
+
+    <div class="menu-content">
+        @for (language of languages; track language) {
+            <div class="menu-item" [class.active]="language === selectedLanguage" (click)="changeLanguage(language)">
+                <img [src]="'assets/' + language + '.png'" [alt]="language + ' flag'"/>
+                {{ language | uppercase }}
+            </div>
+        }
+    </div>
+</div>

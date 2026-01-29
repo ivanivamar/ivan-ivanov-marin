@@ -1,0 +1,85 @@
+@use 'base' as *
+
+.menu
+    position: relative
+    height: 100%
+    z-index: 4
+
+    .menu-button
+        height: 100%
+        width: fit-content
+        padding: 0 2px 0 8px
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 8px
+        cursor: pointer
+        background-color: transparent
+        border: none
+        border-left: 1px solid $lines
+
+        @media (max-width: 768px)
+            border-left: none
+
+        img
+            width: 24px
+
+        i
+            color: $secondary-grey
+            transition: all 0.2s ease-in-out
+
+        &:hover
+            i
+                color: $secondary-white
+
+    .menu-content
+        position: absolute
+        top: 100%
+        right: -1px
+        width: fit-content
+        min-width: 200px
+        height: 0
+        overflow-y: auto
+        background-color: $bg-color
+        border: 1px solid $lines
+        visibility: collapse
+        opacity: 0
+        transition: all 0.2s ease-in-out
+        display: flex
+        flex-direction: column
+        gap: 2px
+        padding: 8px
+
+        @media (max-width: 768px)
+            top: 105%
+            right: 0
+
+        .menu-item
+            display: flex
+            align-items: center
+            gap: 8px
+            padding: 8px
+            border-radius: 8px
+            cursor: pointer
+            transition: all 0.2s ease-in-out
+            color: $secondary-grey
+
+            img
+                width: 24px
+
+            &:hover
+                color: $secondary-white
+
+            &.active
+                color: $accent-orange
+
+    &.active
+        .menu-button
+            i
+                color: $secondary-white
+                transform: rotate(90deg)
+
+        .menu-content
+            height: fit-content
+            opacity: 1
+            visibility: visible
