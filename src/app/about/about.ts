@@ -1,15 +1,13 @@
-import { Component } from '@angular/core';
-import {RouterOutlet} from '@angular/router';
-import {AboutTabs} from './about-tabs/about-tabs';
+import {Component} from '@angular/core';
+import {MarkdownRenderer} from '../../layout/markdown-renderer/markdown-renderer';
 
 @Component({
-  selector: 'app-about',
+    selector: 'app-about',
+    templateUrl: './about.html',
+    styleUrl: './about.sass',
     imports: [
-        RouterOutlet,
-        AboutTabs
-    ],
-  templateUrl: './about.html',
-  styleUrl: './about.sass',
+        MarkdownRenderer
+    ]
 })
 export class About {
 

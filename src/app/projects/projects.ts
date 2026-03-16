@@ -9,8 +9,8 @@ import {TranslatePipe} from '@ngx-translate/core';
     templateUrl: './projects.html',
     styleUrl: './projects.css',
     imports: [
-        RouterLink,
-        TranslatePipe
+        TranslatePipe,
+        RouterLink
     ]
 })
 export class Projects extends AppComponentBase {
