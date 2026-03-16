@@ -15,5 +15,6 @@
     "projects.provalliance_description": "Scheduler Angular application for managing appointments and resources.",
     "projects.provalliance_technologies": "Angular, .NET, DevExtreme, RESTful Services",
     "projects.sener_navigation_app_description": "Navigation app built with MAUI for logistics and transportation management.",
-    "projects.sener_navigation_app_technologies": "MAUI, .NET, Google Maps API, RESTful Services"
+    "projects.sener_navigation_app_technologies": "MAUI, .NET, Google Maps API, RESTful Services",
+    "FindMeIn": "find me in:"
 }

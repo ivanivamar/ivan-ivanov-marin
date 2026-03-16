@@ -1,0 +1,6 @@
+<div class="drawer" [class.open]="isMenuOpen()">
+    @for (item of drawerItems(); track item.label) {
+        <a [routerLink]="[item.path]" [routerLinkActive]="'active'"
+           (click)="closeMenu()">{{ item.label | translate }}</a>
+    }
+</div>

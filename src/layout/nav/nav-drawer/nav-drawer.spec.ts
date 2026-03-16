@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AboutTreeNode } from './about-tree-node';
+import { NavDrawer } from './nav-drawer';
 
-describe('AboutTreeNode', () => {
-  let component: AboutTreeNode;
-  let fixture: ComponentFixture<AboutTreeNode>;
+describe('NavDrawer', () => {
+  let component: NavDrawer;
+  let fixture: ComponentFixture<NavDrawer>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AboutTreeNode]
+      imports: [NavDrawer]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AboutTreeNode);
+    fixture = TestBed.createComponent(NavDrawer);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

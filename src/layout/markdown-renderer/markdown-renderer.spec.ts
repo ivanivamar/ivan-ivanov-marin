@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WorkExperience } from './work-experience';
+import { MarkdownRenderer } from './markdown-renderer';
 
-describe('WorkExperience', () => {
-  let component: WorkExperience;
-  let fixture: ComponentFixture<WorkExperience>;
+describe('MarkdownRenderer', () => {
+  let component: MarkdownRenderer;
+  let fixture: ComponentFixture<MarkdownRenderer>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WorkExperience]
+      imports: [MarkdownRenderer]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(WorkExperience);
+    fixture = TestBed.createComponent(MarkdownRenderer);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

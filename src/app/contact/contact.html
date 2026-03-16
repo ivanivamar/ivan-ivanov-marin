@@ -1,1 +1,21 @@
-<p>contact works!</p>
+<div class="container flex flex-column align-items-center py-3 fadein animation-duration-1000">
+    <form [formGroup]="contactForm" (ngSubmit)="sendMail()" class="flex flex-column gap-4 w-full">
+        <div class="flex flex-column gap-2">
+            <label for="name">_name:</label>
+            <input type="text" id="name" name="name" formControlName="name" required>
+        </div>
+        <div class="flex flex-column gap-2">
+            <label for="email">_email:</label>
+            <input type="email" id="email" name="email" formControlName="email" required>
+        </div>
+        <div class="flex flex-column gap-2">
+            <label for="message">_message:</label>
+            <textarea id="message" name="message" formControlName="message" required
+                      placeholder="your message here..."></textarea>
+        </div>
+
+        <button class="btn secondary" type="submit" [disabled]="!contactForm.valid">
+            submit-message
+        </button>
+    </form>
+</div>

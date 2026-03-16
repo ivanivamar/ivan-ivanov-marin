@@ -9,7 +9,15 @@ export class AppComponentBase {
 
     constructor() {
         this.translateService.addLangs(this.languages);
-        this.translateService.setFallbackLang(this.selectedLanguage);
+        this.getLanguage();
+    }
+
+    getLanguage() {
+        const lang = localStorage.getItem('lang') || 'es';
+        this.translateService.setFallbackLang(lang);
+        this.selectedLanguage = lang;
+        this.translateService.use(lang);
+        return lang;
     }
 
     changeLanguage(lang: string) {

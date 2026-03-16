@@ -15,16 +15,12 @@
 
 <nav class="flex md:hidden">
     <a [routerLink]="['/hello']" class="home-link">{{ brand }}</a>
-    <div class="flex">
-        <app-language-menu #languageMenu (click)="closeMenu()"></app-language-menu>
-        <button class="btn-icon text" (click)="languageMenu.closeMenu(); toggleMenu()">
+    <div class="flex h-full">
+        <app-language-menu #languageMenu (click)="navDrawer.closeMenu()"></app-language-menu>
+        <button class="menu-toggle" (click)="languageMenu.closeMenu(); navDrawer.toggleMenu()">
             <i class="material-symbols-rounded">menu</i>
         </button>
     </div>
 </nav>
 
-<div class="drawer" [class.open]="isMenuOpen()">
-    @for (item of drawerItems(); track item.label) {
-        <a [routerLink]="[item.path]" [routerLinkActive]="'active'" (click)="closeMenu()">{{ item.label | translate }}</a>
-    }
-</div>
+<app-nav-drawer #navDrawer [drawerItems]="drawerItems()"></app-nav-drawer>
