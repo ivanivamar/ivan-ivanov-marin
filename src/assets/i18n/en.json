@@ -9,6 +9,14 @@
     "home.aboutMe": "I am currently looking for a new opportunity as an Angular Developer.",
     "home.aboutMe2": "I have over 4 years of experience in developing web applications using Angular, TypeScript, and related technologies and around 8 years working in the frontend industry. I am passionate about creating efficient and user-friendly applications that meet the needs of users.",
 
+    "work.experience.title": "WORK EXPERIENCE",
+    "work.experience.role1": "Salesforce B2C Commerce Cloud developer",
+    "work.experience.period1": "Aug 2019 - Nov 2022",
+    "work.experience.desc1": "I worked as a Salesforce B2C Commerce Cloud developer, where I was responsible for developing and maintaining e-commerce websites using Salesforce's B2C Commerce Cloud platform. My role involved customizing storefronts as well as translating designs to code, implementing new features, and ensuring the smooth operation of the online stores.",
+    "work.experience.role2": "Angular Developer",
+    "work.experience.period2": "Nov 2022 - Mar 2026",
+    "work.experience.desc2": "I worked at Aggity as an Angular developer for almost 4 years, where I was responsible for developing and maintaining web applications using Angular and additional libraries when needed. I also got to lead a project of 5 people where I had to manage the team and coordinate with the client to ensure the successful delivery of the different sections of the application.",
+
     "skills.title": "SKILLS",
     "skills.frontend": "FRONTEND",
     "skills.backend": "BACKEND",

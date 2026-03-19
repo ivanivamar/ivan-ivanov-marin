@@ -1,22 +1,7 @@
-$bg-color: #FFFFFF
+$bg-color: #F2F2F2
 $on-surface: #000000
-$surface-0: #01080E
-$surface-1: #011627
-$surface-2: #011221
-$surface-3: #020618
-$accent-orange: #FEA55F
-$accent-teal: #43D9AD
-$accent-red: #E99287
-$accent-purple: #C98BDF
-$accent-grey: #90A1B9
-$secondary-grey: #607B96
-$secondary-teal: #3C9D93
-$secondary-blue: #4D5BCE
-$secondary-white: #FFFFFF
 $lines: #626262
 $lines-2: #FFFFFF
-$gradient-1: #4D5BCE
-$gradient-2: #43D9AD
 
 .bg-color
     background-color: $bg-color
@@ -68,8 +53,8 @@ body
     font-optical-sizing: auto
     font-weight: 400
     font-style: normal
-    font-size: 20px
-    line-height: 24px
+    font-size: clamp(.7rem,1vw,1.2rem)
+    line-height: clamp(1.1rem,3vh,1.4rem)
 
 a
     text-decoration: none

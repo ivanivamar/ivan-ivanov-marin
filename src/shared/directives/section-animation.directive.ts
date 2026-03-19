@@ -14,12 +14,13 @@ export class SectionAnimationDirective implements AfterViewInit, OnDestroy {
 
         const animation = gsap.from(this.element.nativeElement, {
             opacity: 0,
-            duration: 10,
+            duration: 3,
+            stagger: 1,
             ease: 'power4.out',
             scrollTrigger: {
                 trigger: this.element.nativeElement,
-                start: '200px 80%',
-                toggleActions: 'play none none none',
+                start: '200px 75%',
+                toggleActions: 'play none none none'
             },
         });
 
