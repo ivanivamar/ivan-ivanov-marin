@@ -3,13 +3,12 @@ import {Home} from './landing-page/home';
 
 export const routes: Routes = [
     {
-        path: '/',
-        component: Home,
+        path: '',
+        component: Home
     },
     {
         path: 'works',
-        loadComponent: () => import('./works/works').then(m => m.Works),
-        pathMatch: 'full'
+        loadComponent: () => import('./works/works').then(m => m.Works)
     },
     {
         path: 'works/:title',

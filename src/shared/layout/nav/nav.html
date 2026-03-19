@@ -3,7 +3,12 @@
         <a [routerLink]="['/hello']" class="home-link">{{ brand }}</a>
         <div class="flex align-items-center">
             @for (item of navItems; track item.label) {
-                <a [routerLink]="[item.path]" [routerLinkActive]="'active'">{{ item.label | translate }}</a>
+                <a
+                    [routerLink]="[item.path]"
+                    [routerLinkActive]="'active'"
+                    [routerLinkActiveOptions]="{ exact: true }">
+                    {{ item.label | translate }}
+                </a>
             }
         </div>
     </div>
