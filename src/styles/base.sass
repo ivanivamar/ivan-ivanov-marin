@@ -9,13 +9,11 @@ $lines-2: #FFFFFF
 *
     box-sizing: border-box
     margin: 0
-    font-weight: normal
     cursor: none
 
     &::before, &::after
         box-sizing: border-box
         margin: 0
-        font-weight: normal
 
 html, body
     cursor: none !important
@@ -54,14 +52,15 @@ body
     font-weight: 400
     font-style: normal
     font-size: clamp(.7rem,1vw,1.2rem)
-    line-height: clamp(1.1rem,3vh,1.4rem)
+    line-height: clamp(1.1rem,3vh,1.8rem)
+    overflow: hidden
 
 a
     text-decoration: none
     font-family: "Montserrat", monospace
     font-optical-sizing: auto
 
-main
+main.home-main
     padding-bottom: 10vh
 
     section
@@ -103,15 +102,3 @@ main
 
     @media (max-width: 1024px)
         width: 80vw
-
-// make scrollbar invisible
-::-webkit-scrollbar
-    width: 0
-    height: 0
-
-::-webkit-scrollbar-track
-    width: 0
-    background: white
-
-::-webkit-scrollbar-thumb
-    background-color: white

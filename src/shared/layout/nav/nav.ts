@@ -19,9 +19,9 @@ export class Nav extends AppComponentBase {
     readonly brand = 'Iván Ivanov Marín';
 
     readonly navItems: MenuItem[] = [
-        { label: 'Home', path: '/' },
-        { label: 'Works', path: '/works' },
-        { label: 'Contact', path: '/contact' },
+        { label: 'Home', path: '' },
+        { label: 'Works', path: 'works' },
+        { label: 'Contact', path: 'contact' },
     ];
 }
 

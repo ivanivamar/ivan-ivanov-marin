@@ -1,0 +1,18 @@
+<section class="project-details-wrapper">
+    <div class="w-full flex align-items-end justify-content-between mb-1" style="height: 15vh">
+        <h2 class="uppercase subheadline">
+            {{ 'Works' | translate }}
+        </h2>
+    </div>
+    <div class="divider w-full"></div>
+    <div style="margin-top: 14vh">
+        <div class="flex flex-column w-full">
+            <h3 class="uppercase subheadline font-light text-4xl">
+                {{ currentProject().title }}
+            </h3>
+            <p class="mt-2">
+                {{ currentProject().description }}
+            </p>
+        </div>
+    </div>
+</section>

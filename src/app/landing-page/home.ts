@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import {Home} from './home/home';
+import {Intro} from './intro/intro';
 import {WorkExperience} from './work-experience/work-experience';
 import {Skills} from './skills/skills';
 
 @Component({
     selector: 'app-landing-page',
-    templateUrl: './landing-page.html',
-    styleUrl: './landing-page.sass',
+    templateUrl: './home.html',
+    styleUrl: './home.sass',
     imports: [
-        Home,
+        Intro,
         WorkExperience,
         Skills
     ]
 })
-export class LandingPage {
+export class Home {
 
 }

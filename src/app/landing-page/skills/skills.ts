@@ -30,7 +30,8 @@ export class Skills {
     ];
 
     toolsSkills = [
-        'Webstorm',
+        'Firebase',
+        'Supabase',
         'Git',
         'Figma'
     ]

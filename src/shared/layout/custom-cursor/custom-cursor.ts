@@ -38,9 +38,18 @@ export class CustomCursor {
         const target = event.target as HTMLElement;
         if (target.tagName === 'A') {
             const cursor = this.renderer.selectRootElement('#cursor', true);
-            if (cursor) {
-                cursor.style.width = '40px';
-                cursor.style.height = '40px';
+            if (target.classList.contains('image-wrapper')) {
+                // make cursor even larger and add a text inside that says VIEW
+                if (cursor) {
+                    cursor.style.width = '87px';
+                    cursor.style.height = '87px';
+                    cursor.innerHTML = '<span class="cursor-text">VIEW</span>';
+                }
+            } else {
+                if (cursor) {
+                    cursor.style.width = '40px';
+                    cursor.style.height = '40px';
+                }
             }
         }
 
@@ -69,6 +78,7 @@ export class CustomCursor {
             cursor.style.height = '26px';
             cursor.style.borderRadius = '420px';
             cursor.style.border = '1px solid #10120E';
+            cursor.innerHTML = '';
         }
     }
 }
