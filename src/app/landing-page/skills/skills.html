@@ -1,0 +1,60 @@
+<section>
+    <div class="section-item section-full justify-content-start">
+        <div class="flex align-items-end mb-1" style="height: 3vh">
+            <h2 class="subheadline">
+                {{ 'skills.title' | translate }}
+            </h2>
+        </div>
+        <div class="divider"></div>
+
+        <div class="flex flex-column md:flex-row flex-nowrap gap-7 w-full" style="margin-top: 5vh">
+            <div class="flex flex-column gap-3 w-full">
+                <h3>
+                    {{ 'skills.frontend' | translate }}
+                </h3>
+                <div class="flex flex-wrap w-full gap-2">
+                    @for (skill of frontendSkills; track skill) {
+                        <button class="chip">
+                            {{ skill }}
+                        </button>
+                    }
+                </div>
+            </div>
+            <div class="flex flex-column gap-3 w-full">
+                <h3>
+                    {{ 'skills.backend' | translate }}
+                </h3>
+                <div class="flex flex-wrap w-full gap-2">
+                    @for (skill of backendSkills; track skill) {
+                        <button class="chip">
+                            {{ skill }}
+                        </button>
+                    }
+                </div>
+            </div>
+            <div class="flex flex-column gap-3 w-full">
+                <h3>
+                    {{ 'skills.tools' | translate }}
+                </h3>
+                <div class="flex flex-wrap w-full gap-2">
+                    @for (skill of toolsSkills; track skill) {
+                        <button class="chip">
+                            {{ skill }}
+                        </button>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="ml-auto flex flex-column align-items-end justify-content-center gap-4" style="margin-top: 15vh">
+            <a class="flex align-items-center gap-1 uppercase" href="/works">
+                {{ 'Works' | translate }}
+                <i class="material-symbols-rounded pointer-events-none">arrow_forward</i>
+            </a>
+            <a class="flex align-items-center gap-1 uppercase"  href="/contact">
+                {{ 'Contact' | translate }}
+                <i class="material-symbols-rounded pointer-events-none">arrow_forward</i>
+            </a>
+        </div>
+    </div>
+</section>
