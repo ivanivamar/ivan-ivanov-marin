@@ -1,31 +1,33 @@
-import {Component, ElementRef, HostListener, inject, signal} from '@angular/core';
-import {AppComponentBase} from '../../../shared/AppComponentBase';
-import {UpperCasePipe} from '@angular/common';
+import {AfterViewInit, Component, ElementRef, inject, Renderer2} from '@angular/core';
+import {AppComponentBase} from '../../../AppComponentBase';
 
 @Component({
-  selector: 'app-language-menu',
-    imports: [
-        UpperCasePipe
-    ],
-  templateUrl: './language-menu.html',
-  styleUrl: './language-menu.sass',
+    selector: 'app-language-menu',
+    templateUrl: './language-menu.html',
+    styleUrl: './language-menu.sass',
 })
-export class LanguageMenu extends AppComponentBase {
+export class LanguageMenu extends AppComponentBase implements AfterViewInit {
     private elementRef = inject(ElementRef);
-    showMenu = signal<boolean>(false);
+    private renderer = inject(Renderer2);
 
-    @HostListener('document:click', ['$event'])
-    onClick(event: MouseEvent) {
-        if (!this.elementRef.nativeElement.contains(event.target)) {
-            this.closeMenu();
-        }
+    ngAfterViewInit() {
+        this.moveToggleButtonSelector();
     }
 
-    toggleMenu() {
-        this.showMenu.update(value => !value);
-    }
+    moveToggleButtonSelector() {
+        setTimeout(() => {
+            const toggleButtonItem = this.renderer.selectRootElement('.toggle-button-item.active', true) as HTMLElement;
+            const toggleButtonSelector = this.renderer.selectRootElement('.toggle-button-selector', true) as HTMLElement;
 
-    closeMenu() {
-        this.showMenu.set(false);
+            if (toggleButtonItem && toggleButtonSelector) {
+                const rect = toggleButtonItem.getBoundingClientRect();
+                const parentRect = this.elementRef.nativeElement.getBoundingClientRect();
+                let left = rect.left - parentRect.left;
+                if (left === 1) {
+                    left = 0;
+                }
+                toggleButtonSelector.style.transform = `translateX(${left}px)`;
+            }
+        }, 0);
     }
 }

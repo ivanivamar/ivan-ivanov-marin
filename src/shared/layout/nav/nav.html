@@ -1,7 +1,7 @@
-<nav class="hidden md:flex">
+<nav>
     <div class="left-nav">
         <a [routerLink]="['/hello']" class="home-link">{{ brand }}</a>
-        <div class="hug flex align-items-center">
+        <div class="flex align-items-center">
             @for (item of navItems; track item.label) {
                 <a [routerLink]="[item.path]" [routerLinkActive]="'active'">{{ item.label | translate }}</a>
             }
@@ -9,18 +9,5 @@
     </div>
     <div class="right-nav flex">
         <app-language-menu></app-language-menu>
-        <a [routerLink]="[contactItem.path]" [routerLinkActive]="'active'">{{ contactItem.label | translate }}</a>
     </div>
 </nav>
-
-<nav class="flex md:hidden">
-    <a [routerLink]="['/hello']" class="home-link">{{ brand }}</a>
-    <div class="flex h-full">
-        <app-language-menu #languageMenu (click)="navDrawer.closeMenu()"></app-language-menu>
-        <button class="menu-toggle" (click)="languageMenu.closeMenu(); navDrawer.toggleMenu()">
-            <i class="material-symbols-rounded">menu</i>
-        </button>
-    </div>
-</nav>
-
-<app-nav-drawer #navDrawer [drawerItems]="drawerItems()"></app-nav-drawer>

@@ -1,0 +1,18 @@
+@use './base' as *
+
+.chip
+    border: 1px solid $lines
+    border-radius: 3.40282e38px
+    width: fit-content
+    height: fit-content
+    margin: 4px
+    padding: 4px 20px
+    font-size: clamp(.8rem,1.2vw,1rem)
+    font-weight: 400
+    color: $on-surface
+    background: transparent
+    cursor: none
+    transition: border 0.2s ease-in-out
+
+    &:hover
+        border: 1px solid $bg-color

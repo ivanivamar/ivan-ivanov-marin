@@ -1,12 +1,19 @@
 {
-    "hello.greeting": "Hola, me llamo",
-    "hello.job-title": "desarrollador Front-end",
-    "hello.about-me": "Soy desarrollador front-end con más de 6 años de experiencia en desarrollo web. Me apasiona crear sitios web atractivos y funcionales.",
-    "hello.contact-me": "Actualmente estoy buscando un nuevo reto. Si tienes alguna pregunta, no dudes en contactarme. Puedes encontrar más información en la sección \"Sobre mí\" o en mi perfil de LinkedIn a continuación.",
-    "hello": "_hola",
-    "about-me": "_sobre-mi",
-    "projects": "_proyectos",
-    "contact-me": "_contacto",
+    "Home": "Inicio",
+    "Works": "Proyectos",
+    "Contact": "Contacto",
+
+    "home.title": "Desarrollador de Angular",
+    "home.contactMe": "Puedes contactarme en",
+    "home.aboutMeTitle": "SOBRE MÍ",
+    "home.aboutMe": "Actualmente estoy buscando una nueva oportunidad como Desarrollador de Angular.",
+    "home.aboutMe2": "Tengo más de 4 años de experiencia en el desarrollo de aplicaciones web utilizando Angular, TypeScript y tecnologías relacionadas, y alrededor de 8 años trabajando en la industria frontend. Me apasiona crear aplicaciones eficientes y fáciles de usar que satisfagan las necesidades de los usuarios.",
+
+    "skills.title": "HABILIDADES",
+    "skills.frontend": "FRONTEND",
+    "skills.backend": "BACKEND",
+    "skills.tools": "HERRAMIENTAS",
+
     "Project": "Proyecto",
     "Projects": "Proyectos",
     "view-project": "ver-proyecto",
@@ -15,6 +22,5 @@
     "projects.provalliance_description": "Aplicación de reservas en Angular para gestionar citas y recursos.",
     "projects.provalliance_technologies": "Angular, .NET, DevExtreme, Servicios RESTful",
     "projects.sener_navigation_app_description": "Aplicación de navegación construida con MAUI para la gestión logística y de transporte.",
-    "projects.sener_navigation_app_technologies": "MAUI, .NET, API de Google Maps, Servicios RESTful",
-    "FindMeIn": "encuentrame en:"
+    "projects.sener_navigation_app_technologies": "MAUI, .NET, API de Google Maps, Servicios RESTful"
 }

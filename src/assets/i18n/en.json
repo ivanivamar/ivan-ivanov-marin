@@ -1,12 +1,19 @@
 {
-    "hello.greeting": "Hi all. I am",
-    "hello.job-title": "Front-end developer",
-    "hello.about-me": "I am a front-end developer with over 4 years of experience in web development. I love to create beautiful and functional websites.",
-    "hello.contact-me": "I am currently looking for a new challenge. If you have any questions, please don't hesitate to contact me. You can find more info on the about me section or on my LinkedIn profile below.",
-    "hello": "_hello",
-    "about-me": "_about-me",
-    "projects": "_projects",
-    "contact-me": "_contact-me",
+    "Home": "Home",
+    "Works": "Works",
+    "Contact": "Contact",
+
+    "home.title": "Angular Developer",
+    "home.contactMe": "You can contact me at",
+    "home.aboutMeTitle": "ABOUT ME",
+    "home.aboutMe": "I am currently looking for a new opportunity as an Angular Developer.",
+    "home.aboutMe2": "I have over 4 years of experience in developing web applications using Angular, TypeScript, and related technologies and around 8 years working in the frontend industry. I am passionate about creating efficient and user-friendly applications that meet the needs of users.",
+
+    "skills.title": "SKILLS",
+    "skills.frontend": "FRONTEND",
+    "skills.backend": "BACKEND",
+    "skills.tools": "TOOLS",
+
     "Project": "Project",
     "Projects": "Projects",
     "view-project": "view-project",

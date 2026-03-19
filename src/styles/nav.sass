@@ -4,26 +4,25 @@
     text-decoration: none
     font-size: 16px
     font-weight: 450
-    line-height: 21px
+    line-height: 26px
     position: relative
-    transition: color 0.2s ease-in-out
 
 @mixin active-underline
     &::after
         content: ""
         position: absolute
         bottom: 0
-        left: 0
-        width: 100%
-        height: 2px
-        background-color: $accent-orange
-        transform: scaleX(0)
-        transform-origin: center
-        transition: all 0.2s ease-in-out
+        left: 10px
+        width: 80%
+        height: 6px
+        background-color: $on-surface
+        transform: scaleY(0)
+        transform-origin: bottom center
+        transition: all 0.3s ease-in-out
 
     &:hover::after,
     &.active::after
-        transform: scaleX(1)
+        transform: scaleY(1)
 
 nav
     display: flex
@@ -31,85 +30,34 @@ nav
     justify-content: space-between
     border-bottom: 1px solid $lines
     width: 100vw
+    padding: 0 8px
     background-color: $bg-color
     position: fixed
     top: 0
     left: 0
     z-index: 5
-    height: 50px
+    height: 56px
 
     .left-nav
         display: flex
         flex: 1 1 0
-
-    .right-nav .menu
-        border-right: 1px solid $lines
+        height: 100%
 
     .home-link
         @include link-typography
-        width: 304px
         text-align: left
-        transform: none !important
-
-        &::after
-            display: none
+        font-size: 20px
+        font-family: 'Brice SemiBold', serif
 
         @media (max-width: 768px)
-            width: 100%
-            padding-left: 16px
+            display: none
 
     a
         @include link-typography
-        @include active-underline
-        color: $secondary-grey
+        color: $on-surface
         height: 100%
         padding: 14px 32px
         text-align: center
-        border-right: 1px solid $lines
-        transition: all 0.2s ease-in-out
 
-        &:last-child
-            border-right: 1px solid $lines
-
-        &.contact-link
-            border-right: none
-            border-left: 1px solid $lines
-
-        &:hover,
-        &.active
-            color: $secondary-white
-
-    .menu-toggle
-        border: 0
-        background: transparent
-        color: $secondary-white
-        height: 100%
-        display: flex
-        align-items: center
-        justify-content: center
-        width: 49px
-        border-left: 1px solid $lines
-
-.drawer
-    height: 0
-    visibility: collapse
-    width: 100vw
-    background-color: $bg-color
-    display: flex
-    flex-direction: column
-    position: fixed
-    top: 50px
-    z-index: 3
-    transition: height 0.2s ease-in-out
-
-    &.open
-        height: 100%
-        visibility: visible
-
-    a
-        @include link-typography
+    a:not(.home-link)
         @include active-underline
-        color: $secondary-white
-        width: 100%
-        padding: 14px 16px
-        border-bottom: 1px solid $lines

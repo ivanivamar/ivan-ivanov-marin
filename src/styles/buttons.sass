@@ -8,10 +8,10 @@
     gap: 10px
     border-radius: 8px
     transition: all 0.2s ease-in-out
-    cursor: pointer
+    cursor: none !important
     width: fit-content
     border: none
-    height: 40px
+    height: 36px
     font-size: 14px
     font-weight: 450
     font-family: 'Fira Code', monospace
@@ -33,11 +33,8 @@
 
     &.outlined
         background-color: transparent
-        border: 1px solid $secondary-white
-        color: $secondary-white
-
-        &:hover
-            border-color: $secondary-white (-50%)
+        border: 2px solid black
+        color: black
 
 .btn-icon
     display: inline-flex
@@ -46,7 +43,7 @@
     padding: 10px
     transition: all 0.2s ease-in-out
     border: none
-    cursor: pointer
+    cursor: none !important
     width: fit-content
     border-radius: 8px
 
@@ -57,3 +54,41 @@
 
         &:hover, &:focus
             background-color: rgba($secondary-white, 0.1)
+
+.toggle-button
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 20px
+    border: 1px solid $lines
+    border-radius: 20px
+
+    .toggle-button-item
+        border-radius: 16px
+        border: none
+        cursor: none
+        height: 32px
+        position: relative
+        width: 64px
+        background-color: transparent
+        color: $on-surface
+        font-weight: 500
+        display: flex
+        align-items: center
+        justify-content: center
+
+        img
+            height: 32px
+            pointer-events: none
+
+    .toggle-button-selector
+        border-radius: 16px
+        height: 32px
+        width: 64px
+        position: absolute
+        top: 0
+        left: 0
+        background-color: $on-surface
+        transition: transform 0.3s ease-in-out
+        z-index: -1
