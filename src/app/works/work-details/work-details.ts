@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
 import {SectionAnimationDirective} from '../../../shared/directives/section-animation.directive';
-import {Project, projects} from '../works';
+import {projects} from '../works';
 import {ActivatedRoute, RouterLink} from '@angular/router';
 import {TranslatePipe} from '@ngx-translate/core';
 import {NgClass} from '@angular/common';

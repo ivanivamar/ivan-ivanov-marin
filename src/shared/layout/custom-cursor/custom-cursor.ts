@@ -1,7 +1,8 @@
 import {
     ChangeDetectionStrategy,
     Component,
-    computed, ElementRef, inject, Renderer2,
+    ElementRef,
+    inject, Renderer2,
     signal, viewChild,
 } from '@angular/core';
 import {TranslatePipe} from '@ngx-translate/core';
@@ -14,7 +15,7 @@ import {TranslatePipe} from '@ngx-translate/core';
     host: {
         '(window:mousemove)': 'onMouseMove($event)',
         '(window:mouseover)': 'onMouseOver($event)',
-        '(window:mouseout)': 'onMouseOut($event)',
+        '(window:mouseout)': 'onMouseOut()',
     },
     imports: [
         TranslatePipe
@@ -73,7 +74,7 @@ export class CustomCursor {
     }
 
     // on mouse leave links and buttons, reset height and width of cursor
-    protected onMouseOut(event: MouseEvent): void {
+    protected onMouseOut(): void {
         const cursor = this.renderer.selectRootElement('#cursor', true);
 
         if (!cursor) {
