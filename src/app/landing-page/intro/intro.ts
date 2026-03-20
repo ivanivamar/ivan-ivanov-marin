@@ -6,13 +6,13 @@ import {SectionAnimationDirective} from "../../../shared/directives/section-anim
 import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
-    selector: 'app-home',
+    selector: 'app-intro',
     imports: [SectionAnimationDirective, TranslatePipe],
-    templateUrl: './home.html',
-    styleUrl: './home.sass',
+    templateUrl: './intro.html',
+    styleUrl: './intro.sass',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Home implements AfterViewInit {
+export class Intro implements AfterViewInit {
     ngAfterViewInit() {
         gsap.registerPlugin(ScrollTrigger, SplitText);
 

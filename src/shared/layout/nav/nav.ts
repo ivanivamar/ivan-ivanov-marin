@@ -1,4 +1,4 @@
-import {Component, computed, Signal, signal} from '@angular/core';
+import {Component} from '@angular/core';
 import {RouterLink, RouterLinkActive} from '@angular/router';
 import {LanguageMenu} from './language-menu/language-menu';
 import {AppComponentBase} from '../../AppComponentBase';
@@ -19,13 +19,13 @@ export class Nav extends AppComponentBase {
     readonly brand = 'Iván Ivanov Marín';
 
     readonly navItems: MenuItem[] = [
-        { label: 'Home', path: '/' },
-        { label: 'Works', path: '/works' },
-        { label: 'Contact', path: '/contact' },
+        { label: 'Home', path: '', routeExact: true },
+        { label: 'Works', path: 'works', routeExact: false }
     ];
 }
 
 export interface MenuItem {
     label: string;
     path: string;
+    routeExact: boolean;
 }

@@ -3,6 +3,8 @@
     "Works": "Works",
     "Contact": "Contact",
 
+    "view": "VIEW",
+
     "home.title": "Angular Developer",
     "home.contactMe": "You can contact me at",
     "home.aboutMeTitle": "ABOUT ME",
@@ -16,6 +18,20 @@
     "work.experience.role2": "Angular Developer",
     "work.experience.period2": "Nov 2022 - Mar 2026",
     "work.experience.desc2": "I worked at Aggity as an Angular developer for almost 4 years, where I was responsible for developing and maintaining web applications using Angular and additional libraries when needed. I also got to lead a project of 5 people where I had to manage the team and coordinate with the client to ensure the successful delivery of the different sections of the application.",
+
+    "work.caae.desc": "Migration of a large and complex Windows Forms application to a modern Angular web application.",
+    "workk.caae.detail": "Migration of a Windows Forms application to a modern Angular web application. I worked on the migration of the application from .NET Framework to Angular/C#, and I also implemented the integration of SharePoint with the application. I also worked with the client to ensure the smooth migration of the application and lead my team of 5 people in the implementation of the new features.",
+    "work.caae.duration": "1 Year",
+    "work.provalliance.desc": "Scheduler Angular application for managing appointments and resources.",
+    "work.provalliance.detail": "Scheduler Angular application for managing appointments and resources. I was the person who implemented the scheduler and the different features that the client required while also ensuring a clean structure of the application and code.",
+    "work.provalliance.duration": "2 Years",
+    "work.senner.desc": "Navigation app built with MAUI for logistics and transportation management.",
+    "work.senner.detail": "Navigation app built with MAUI for logistics and transportation management. I worked on the whole booking system for the main web application, including some of the additional pages required for the zones and logistics. I also made the whole mobile application, which was built with MAUI.",
+    "work.senner.duration": "6 Months",
+
+    "work.details.duration": "Duration",
+    "work.details.roles": "Roles",
+    "work.details.description": "Description",
 
     "skills.title": "SKILLS",
     "skills.frontend": "FRONTEND",
@@ -31,5 +47,5 @@
     "projects.provalliance_technologies": "Angular, .NET, DevExtreme, RESTful Services",
     "projects.sener_navigation_app_description": "Navigation app built with MAUI for logistics and transportation management.",
     "projects.sener_navigation_app_technologies": "MAUI, .NET, Google Maps API, RESTful Services",
-    "FindMeIn": "find me in:"
+    "FindMeIn": "FIND ME IN:"
 }

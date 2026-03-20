@@ -15,7 +15,7 @@ export class LenisService {
                 lerp: 0.05,
                 smoothWheel: true,
                 autoResize: true,
-                touchMultiplier: 0
+                touchMultiplier: 0,
             });
         });
     }

@@ -1,0 +1,32 @@
+.image-wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 40vw
+    aspect-ratio: 2
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+
+    img
+        width: 38vw
+        height: auto
+        pointer-events: none
+
+    &.project-caae
+        // make a soft green gradient
+        background: linear-gradient(135deg, #a8e6cf, #dcedc1)
+
+    &.project-provalliance
+        // make a soft pink gradient
+        background: linear-gradient(135deg, #ffb3ba, #ffdfba)
+
+        img
+            width: auto
+            height: 90%
+
+    &.project-senner
+        // make a soft blue gradient
+        background: linear-gradient(135deg, #a0c4ff, #bdb2ff)
+
+        img
+            width: auto
+            height: 30vh

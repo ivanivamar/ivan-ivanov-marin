@@ -1,0 +1,32 @@
+<section class="project-details-wrapper">
+    <div class="w-full flex align-items-end justify-content-between mb-1" style="height: 15vh">
+        <h2 class="uppercase subheadline">
+            {{ 'Works' | translate }}
+        </h2>
+    </div>
+    <div class="divider w-full"></div>
+    <div style="margin-top: 14vh">
+        <div class="flex flex-column w-full">
+            <span class="text-lg font-light block mb-3" style="letter-spacing: 6px">
+                [
+                <span class="index-scroll-container"
+                      style="display: inline-block; overflow: hidden; vertical-align: bottom;">
+                    <span #projectIndex class="current-project-index" style="display: inline-block">
+                        {{ currentIndex() }}
+                    </span>
+                </span>
+                / {{ projects().length }} ]
+            </span>
+
+            <div class="description-wrapper">
+                <h3 class="uppercase subheadline font-light text-4xl mb-2"
+                    style="font-size: clamp(1.2rem,2vw,2rem); font-weight: 300">
+                    {{ currentProject().title }}
+                </h3>
+                <p style="font-size: clamp(1rem,1.2vw,1.5rem); font-weight: 300">
+                    {{ currentProject().description | translate }}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

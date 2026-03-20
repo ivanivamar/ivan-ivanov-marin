@@ -3,6 +3,8 @@
     "Works": "Proyectos",
     "Contact": "Contacto",
 
+    "view": "VER",
+
     "home.title": "Desarrollador de Angular",
     "home.contactMe": "Puedes contactarme en",
     "home.aboutMeTitle": "SOBRE MÍ",
@@ -17,6 +19,20 @@
     "work.experience.period2": "Nov 2022 - Mar 2026",
     "work.experience.desc2": "Trabajé en Aggity como desarrollador de Angular durante casi 4 años, donde fui responsable de desarrollar y mantener aplicaciones web utilizando Angular y bibliotecas adicionales cuando era necesario. También tuve la oportunidad de liderar un proyecto de 5 personas, donde tuve que gestionar el equipo y coordinar con el cliente para garantizar la entrega exitosa de las diferentes secciones de la aplicación.",
 
+    "work.caae.desc": "Migración de una aplicación Windows Forms grande y compleja a una aplicación web moderna Angular.",
+    "work.caae.detail": "Migración de una aplicación Windows Forms a una aplicación web moderna Angular. Trabajé en la migración de la aplicación desde .NET Framework a Angular/C#, y también implementé la integración de SharePoint con la aplicación. Trabajé con el cliente para garantizar la migración suave de la aplicación y lideré mi equipo de 5 personas en la implementación de las nuevas características.",
+    "work.caae.duration": "1 Año",
+    "work.provalliance.desc": "Agenda de reservas Angular para gestionar citas y recursos.",
+    "work.provalliance.detail": "Agenda de reservas Angular para gestionar citas y recursos. Implementé la agenda y las diferentes características que el cliente requería mientras también garantizo una estructura limpia de la aplicación y el código.",
+    "work.provalliance.duration": "2 Años",
+    "work.senner.desc": "Applicación de navegación construida con MAUI para la gestión de logística y transporte.",
+    "work.senner.detail": "Applicación de navegación construida con MAUI para la gestión de logística y transporte. Trabajé en el sistema de reserva principal de la aplicación web, incluyendo algunas de las páginas adicionales requeridas para las zonas y logística. También realicé la aplicación móvil completa, que fue hecha con MAUI.",
+    "work.senner.duration": "6 Meses",
+
+    "work.details.duration": "Duración",
+    "work.details.roles": "Roles",
+    "work.details.description": "Descripción",
+
     "skills.title": "HABILIDADES",
     "skills.frontend": "FRONTEND",
     "skills.backend": "BACKEND",
@@ -30,5 +46,6 @@
     "projects.provalliance_description": "Aplicación de reservas en Angular para gestionar citas y recursos.",
     "projects.provalliance_technologies": "Angular, .NET, DevExtreme, Servicios RESTful",
     "projects.sener_navigation_app_description": "Aplicación de navegación construida con MAUI para la gestión logística y de transporte.",
-    "projects.sener_navigation_app_technologies": "MAUI, .NET, API de Google Maps, Servicios RESTful"
+    "projects.sener_navigation_app_technologies": "MAUI, .NET, API de Google Maps, Servicios RESTful",
+    "FindMeIn": "ENCUENTRAME EN:"
 }

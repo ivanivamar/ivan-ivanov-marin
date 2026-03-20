@@ -1,0 +1,68 @@
+<main>
+    <header>
+        <a href="#" class="flex align-items-center gap-2 md:text-body text-xl subheadline uppercase" [routerLink]="['/works']">
+            <i class="material-symbols-rounded pointer-events-none">
+                arrow_back
+            </i>
+            {{ 'Back' | translate }}
+        </a>
+
+        <div class="flex flex-column gap-2">
+            <h1 class="subheadline uppercase md:text-6xl">
+                {{ project?.title }}
+            </h1>
+            <div class="divider w-full"></div>
+        </div>
+    </header>
+
+    <section class="p-0 w-full h-full flex flex-column" style="gap: 40vh">
+        <div
+            class="image-wrapper" [ngClass]="'project-' + project?.title">
+            <img
+                [src]="project?.image"
+                [alt]="project?.title"/>
+        </div>
+        <div class="details-grid">
+            <div class="flex flex-column gap-5">
+                <div class="flex flex-column gap-2">
+                    <h2 class="subheadline font-light">
+                        {{ 'skills.tools' | translate }}
+                    </h2>
+                    <div class="flex flex-wrap w-full gap-2">
+                        @for (tool of project?.tools; track tool) {
+                            <button class="chip">
+                                {{ tool }}
+                            </button>
+                        }
+                    </div>
+                </div>
+                <div class="flex flex-row justify-content-between">
+                    <div class="flex flex-column gap-2">
+                        <h2 class="subheadline font-light">
+                            {{ 'work.details.duration' | translate }}
+                        </h2>
+                        <p>
+                            {{ project?.duration | translate }}
+                        </p>
+                    </div>
+                    <div class="flex flex-column gap-2">
+                        <h2 class="subheadline font-light">
+                            {{ 'work.details.roles' | translate }}
+                        </h2>
+                        <p>
+                            {{ project?.roles!.join(' / ') }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-column gap-2">
+                <h2 class="subheadline font-light">
+                    {{ 'work.details.description' | translate }}
+                </h2>
+                <p>
+                    {{ project?.descriptionDetail | translate }}
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
