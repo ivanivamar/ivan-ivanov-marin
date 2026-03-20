@@ -23,7 +23,7 @@ export const projects = signal<Project[]>([
         roles: ['Tech Lead', 'Frontend', 'Backend']
     },
     {
-        title: 'senner',
+        title: 'sener',
         description: 'work.senner.desc',
         descriptionDetail: 'work.senner.detail',
         duration: 'work.senner.duration',
