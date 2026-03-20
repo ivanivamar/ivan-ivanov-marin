@@ -16,6 +16,7 @@ import {Project, projects} from '../works';
 
 export const currentProject = signal<Project>({
     title: '',
+    displayTitle: '',
     description: '',
     descriptionDetail: '',
     duration: '',

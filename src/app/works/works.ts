@@ -4,6 +4,7 @@ import {WorkDescription} from './work-description/work-description';
 
 export class Project {
     title: string = '';
+    displayTitle: string = '';
     description: string = '';
     descriptionDetail: string = '';
     duration: string = '';
@@ -15,6 +16,7 @@ export class Project {
 export const projects = signal<Project[]>([
     {
         title: 'caae',
+        displayTitle: 'work.caae.title',
         description: 'work.caae.desc',
         descriptionDetail: 'work.caae.detail',
         duration: 'work.caae.duration',
@@ -24,6 +26,7 @@ export const projects = signal<Project[]>([
     },
     {
         title: 'sener',
+        displayTitle: 'work.senner.title',
         description: 'work.senner.desc',
         descriptionDetail: 'work.senner.detail',
         duration: 'work.senner.duration',
@@ -33,6 +36,7 @@ export const projects = signal<Project[]>([
     },
     {
         title: 'provalliance',
+        displayTitle: 'work.provalliance.title',
         description: 'work.provalliance.desc',
         descriptionDetail: 'work.provalliance.detail',
         duration: 'work.provalliance.duration',
