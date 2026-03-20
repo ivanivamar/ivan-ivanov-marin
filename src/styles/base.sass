@@ -1,6 +1,6 @@
 $bg-color: #F2F2F2
 $on-surface: #000000
-$lines: #626262
+$lines: #ACACAC
 $lines-2: #FFFFFF
 
 .bg-color
@@ -17,23 +17,10 @@ $lines-2: #FFFFFF
 
 html, body
     cursor: none !important
-    scroll-behavior: auto !important
-
-html.lenis,
-html.lenis body
-    height: auto
-
-.lenis.lenis-smooth
-    scroll-behavior: auto !important
-
-.lenis.lenis-smooth [data-lenis-prevent]
-    overscroll-behavior: contain
-
-.lenis.lenis-stopped
     overflow: hidden
 
-.lenis.lenis-scrolling iframe
-    pointer-events: none
+    @media (max-width: 1024px)
+        overflow: auto
 
 a, button, input, textarea, select, [role="button"]
     cursor: none
@@ -53,7 +40,8 @@ body
     font-style: normal
     font-size: clamp(.7rem,1vw,1.2rem)
     line-height: clamp(1.1rem,3vh,1.8rem)
-    overflow: hidden
+    min-height: 100vh
+    min-width: 320px
 
 a
     text-decoration: none
@@ -80,6 +68,7 @@ main.home-main
 
             &.section-full
                 width: 75vw
+
                 justify-content: start
                 height: auto
 
