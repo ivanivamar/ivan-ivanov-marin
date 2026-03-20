@@ -17,7 +17,11 @@ import {Project, projects} from '../works';
 export const currentProject = signal<Project>({
     title: '',
     description: '',
-    image: ''
+    descriptionDetail: '',
+    duration: '',
+    image: '',
+    tools: [],
+    roles: []
 });
 
 @Component({
