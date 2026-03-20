@@ -1,5 +1,5 @@
 <section>
-    <div class="section-item section-full justify-content-start" style="height: clamp(15rem,60vh,20rem)">
+    <div class="section-item section-full justify-content-start" style="auto">
         <div class="flex align-items-end mb-1" style="height: 3vh">
             <h2 class="subheadline">
                 {{ 'work.experience.title' | translate }}
@@ -7,7 +7,7 @@
         </div>
         <div class="divider"></div>
 
-        <div class="work-grid mt-5 justify-content-between w-full">
+        <div class="work-grid mt-5 justify-content-between w-full gap-5">
             @for (exp of experiences(); track exp.company) {
                 <div class="flex flex-column">
                     <h3 class="subheadline">{{ exp.company }}</h3>
