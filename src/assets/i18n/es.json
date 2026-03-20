@@ -17,6 +17,10 @@
     "work.experience.period2": "Nov 2022 - Mar 2026",
     "work.experience.desc2": "Trabajé en Aggity como desarrollador de Angular durante casi 4 años, donde fui responsable de desarrollar y mantener aplicaciones web utilizando Angular y bibliotecas adicionales cuando era necesario. También tuve la oportunidad de liderar un proyecto de 5 personas, donde tuve que gestionar el equipo y coordinar con el cliente para garantizar la entrega exitosa de las diferentes secciones de la aplicación.",
 
+    "work.caae.desc": "Migración de una aplicación Windows Forms grande y compleja a una aplicación web moderna Angular.",
+    "work.provalliance.desc": "Agenda de reservas Angular para gestionar citas y recursos.",
+    "work.senner.desc": "Applicación de navegación construida con MAUI para la gestión de logística y transporte.",
+
     "skills.title": "HABILIDADES",
     "skills.frontend": "FRONTEND",
     "skills.backend": "BACKEND",

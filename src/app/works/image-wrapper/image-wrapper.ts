@@ -13,14 +13,13 @@ import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {NgClass} from '@angular/common';
 import {RouterLink} from '@angular/router';
 import {SectionAnimationDirective} from '../../../shared/directives/section-animation.directive';
+import {Project, projects} from '../works';
 
-class Project {
-    title: string = '';
-    description: string = '';
-    image: string = '';
-}
-
-export const currentProject = signal<Project>(new Project());
+export const currentProject = signal<Project>({
+    title: '',
+    description: '',
+    image: ''
+});
 
 @Component({
     selector: 'app-image-wrapper',
@@ -34,11 +33,7 @@ export const currentProject = signal<Project>(new Project());
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ImageWrapper implements AfterViewInit, OnDestroy {
-    projects = signal<Project[]>([
-        {title: 'caae', description: 'Detail for 1', image: 'assets/projects/caae.png'},
-        {title: 'provalliance', description: 'Detail for 2', image: 'assets/projects/provalliance.png'},
-        {title: 'senner', description: 'Detail for 3', image: 'assets/projects/senner.png'},
-    ]);
+    protected readonly projects = projects;
     activeIndex = signal<number>(0);
     imageElements = viewChildren<ElementRef>('projectImage');
 
@@ -53,17 +48,17 @@ export class ImageWrapper implements AfterViewInit, OnDestroy {
         this.imageElements().forEach((ref, index) => {
             ScrollTrigger.create({
                 trigger: ref.nativeElement,
-                start: 'top 35%',
-                end: 'bottom 65%',
+                start: 'top 50%',
+                end: 'bottom 50%',
                 onEnter: () => this.selectProject(index),
-                onEnterBack: () => this.selectProject(index),
+                onEnterBack: () => this.selectProject(index)
             });
         });
     }
 
     selectProject(index: number) {
         this.activeIndex.set(index);
-        currentProject.set(this.projects()[index]);
+        currentProject.set(projects()[index]);
     }
 
     ngOnDestroy() {
