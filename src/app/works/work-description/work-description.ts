@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, computed, effect, ElementRef, viewChild} from '@angular/core';
 import {TranslatePipe} from "@ngx-translate/core";
 import {currentProject} from '../image-wrapper/image-wrapper';
-import {Project, projects} from '../works';
+import {projects} from '../works';
 import {SectionAnimationDirective} from '../../../shared/directives/section-animation.directive';
 import {gsap} from 'gsap';
 

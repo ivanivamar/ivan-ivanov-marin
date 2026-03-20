@@ -1,4 +1,4 @@
-import {Component, ElementRef, signal, viewChildren} from '@angular/core';
+import {Component, signal} from '@angular/core';
 import {ImageWrapper} from './image-wrapper/image-wrapper';
 import {WorkDescription} from './work-description/work-description';
 
