@@ -6,7 +6,7 @@
                 <a
                     [routerLink]="[item.path]"
                     [routerLinkActive]="'active'"
-                    [routerLinkActiveOptions]="{ exact: true }">
+                    [routerLinkActiveOptions]="{ exact: item.routeExact }">
                     {{ item.label | translate }}
                 </a>
             }
