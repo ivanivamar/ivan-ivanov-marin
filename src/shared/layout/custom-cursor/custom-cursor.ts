@@ -53,7 +53,7 @@ export class CustomCursor {
                 cursor.style.transform = 'scale(3)';
                 this.customCursorText().nativeElement.style.display = 'block';
             } else {
-                cursor.style.transform = 'scale(2)';
+                cursor.style.transform = 'scale(1.8)';
             }
         }
 
