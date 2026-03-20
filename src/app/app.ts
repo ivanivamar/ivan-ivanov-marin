@@ -4,10 +4,12 @@ import {AppComponentBase} from '../shared/AppComponentBase';
 import {CustomCursor} from '../shared/layout/custom-cursor/custom-cursor';
 import {LenisService} from '../shared/services/lenis.service';
 import {Nav} from '../shared/layout/nav/nav';
+import {Footer} from '../shared/layout/footer/footer';
+import {filter, Subject, takeUntil} from 'rxjs';
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, CustomCursor, Nav],
+    imports: [RouterOutlet, CustomCursor, Nav, Footer],
     templateUrl: './app.html',
     styleUrl: './app.css',
     changeDetection: ChangeDetectionStrategy.Eager
