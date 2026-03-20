@@ -1,13 +1,14 @@
 import {
     ChangeDetectionStrategy,
     Component,
-    computed, inject, Renderer2,
-    signal,
+    computed, ElementRef, inject, Renderer2,
+    signal, viewChild,
 } from '@angular/core';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
     selector: 'app-custom-cursor',
-    template: '<div id="cursor" class="custom-cursor" [style.transform]="transform()"></div>',
+    templateUrl: './custom-cursor.html',
     styleUrl: './custom-cursor.sass',
     changeDetection: ChangeDetectionStrategy.OnPush,
     host: {
@@ -15,70 +16,77 @@ import {
         '(window:mouseover)': 'onMouseOver($event)',
         '(window:mouseout)': 'onMouseOut($event)',
     },
+    imports: [
+        TranslatePipe
+    ]
 })
 export class CustomCursor {
-    private readonly position = signal({x: 0, y: 0});
     private renderer = inject(Renderer2);
 
+    customCursor = viewChild.required<ElementRef>('customCursor');
+    customCursorText = viewChild.required<ElementRef>('customCursorText');
+
+    cursorX = signal(0);
+    cursorY = signal(0);
     isOnButton = false;
 
-    protected readonly transform = computed(() => {
-        const {x, y} = this.position();
-        return `translate3d(${x}px, ${y}px, 0)`;
-    });
-
     protected onMouseMove(event: MouseEvent): void {
-        if (!this.isOnButton) {
-            this.position.set({x: event.clientX, y: event.clientY});
+        if (this.isOnButton) {
+            return;
         }
+
+        this.cursorX.set(event.clientX);
+        this.cursorY.set(event.clientY);
     }
 
-    // on hover links and buttons, increase height and width of cursor
     protected onMouseOver(event: MouseEvent): void {
         const target = event.target as HTMLElement;
+        const cursor = this.renderer.selectRootElement('#cursor', true);
+
+        if (!cursor) {
+            return;
+        }
+
         if (target.tagName === 'A') {
-            const cursor = this.renderer.selectRootElement('#cursor', true);
+            cursor.style.border = 'none';
             if (target.classList.contains('image-wrapper')) {
-                // make cursor even larger and add a text inside that says VIEW
-                if (cursor) {
-                    cursor.style.width = '87px';
-                    cursor.style.height = '87px';
-                    cursor.innerHTML = '<span class="cursor-text">VIEW</span>';
-                }
+                cursor.style.transform = 'scale(3)';
+                this.customCursorText().nativeElement.style.display = 'block';
             } else {
-                if (cursor) {
-                    cursor.style.width = '40px';
-                    cursor.style.height = '40px';
-                }
+                cursor.style.transform = 'scale(2)';
             }
         }
 
         if (target.tagName === 'BUTTON') {
-            // make the cursor take the height and width of the button and the top and left position of the button
-            const cursor = this.renderer.selectRootElement('#cursor', true);
-            if (cursor) {
-                this.isOnButton = true;
-                const style = window.getComputedStyle(target);
-                const rect = target.getBoundingClientRect();
-                cursor.style.width = `${rect.width}px`;
-                cursor.style.height = `${rect.height}px`;
-                this.position.set({x: rect.left + 12, y: rect.top + 12});
-                cursor.style.borderRadius = style.getPropertyValue('border-radius');
-                cursor.style.border = 'none';
-            }
+            cursor.style.border = 'none';
+            this.isOnButton = true;
+
+            const style = window.getComputedStyle(target);
+            const rect = target.getBoundingClientRect();
+
+            cursor.style.width = `${rect.width}px`;
+            cursor.style.height = `${rect.height}px`;
+            cursor.style.borderRadius = style.getPropertyValue('border-radius');
+            this.cursorX.set(rect.left + 12);
+            this.cursorY.set(rect.top + 12);
         }
     }
 
     // on mouse leave links and buttons, reset height and width of cursor
     protected onMouseOut(event: MouseEvent): void {
         const cursor = this.renderer.selectRootElement('#cursor', true);
-        if (cursor) {
-            this.isOnButton = false;
-            cursor.style.width = '26px';
-            cursor.style.height = '26px';
-            cursor.style.borderRadius = '420px';
-            cursor.style.border = '1px solid #10120E';
-            cursor.innerHTML = '';
+
+        if (!cursor) {
+            return;
         }
+
+        this.isOnButton = false;
+        cursor.style.transform = 'scale(1)';
+        cursor.style.borderRadius = '420px';
+        cursor.style.border = '1px solid #10120E';
+        cursor.style.width = '26px';
+        cursor.style.height = '26px';
+
+        this.customCursorText().nativeElement.style.display = 'none';
     }
 }
