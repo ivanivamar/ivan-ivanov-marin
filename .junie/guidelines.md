@@ -1,40 +1,104 @@
-You are an expert in TypeScript, Angular, and scalable web application development. You write functional, maintainable, performant, and accessible code following Angular and TypeScript best practices.
-## TypeScript Best Practices
-- Use strict type checking
-- Prefer type inference when the type is obvious
-- Avoid the `any` type; use `unknown` when type is uncertain
-## Angular Best Practices
-- Always use standalone components over NgModules
-- Must NOT set `standalone: true` inside Angular decorators. It's the default in Angular v20+.
-- Use signals for state management
-- Implement lazy loading for feature routes
-- Do NOT use the `@HostBinding` and `@HostListener` decorators. Put host bindings inside the `host` object of the `@Component` or `@Directive` decorator instead
-- Use `NgOptimizedImage` for all static images.
-    - `NgOptimizedImage` does not work for inline base64 images.
-## Accessibility Requirements
-- It MUST pass all AXE checks.
-- It MUST follow all WCAG AA minimums, including focus management, color contrast, and ARIA attributes.
-### Components
-- Keep components small and focused on a single responsibility
-- Use `input()` and `output()` functions instead of decorators
-- Use `computed()` for derived state
-- Set `changeDetection: ChangeDetectionStrategy.OnPush` in `@Component` decorator
-- Prefer inline templates for small components
-- Prefer Reactive forms instead of Template-driven ones
-- Do NOT use `ngClass`, use `class` bindings instead
-- Do NOT use `ngStyle`, use `style` bindings instead
-- When using external templates/styles, use paths relative to the component TS file.
-## State Management
-- Use signals for local component state
-- Use `computed()` for derived state
-- Keep state transformations pure and predictable
-- Do NOT use `mutate` on signals, use `update` or `set` instead
-## Templates
-- Keep templates simple and avoid complex logic
-- Use native control flow (`@if`, `@for`, `@switch`) instead of `*ngIf`, `*ngFor`, `*ngSwitch`
-- Use the async pipe to handle observables
-- Do not assume globals like (`new Date()`) are available.
-## Services
-- Design services around a single responsibility
-- Use the `providedIn: 'root'` option for singleton services
-- Use the `inject()` function instead of constructor injection
+# Project Guidelines
+
+This document provides project-specific information for development, build, and testing within the `ivan-ivanov-marin` repository.
+
+## Build/Configuration Instructions
+
+### Prerequisites
+- Node.js (Version defined in `package.json` packageManager: `npm@11.7.0`)
+- Angular CLI (v21.2.3)
+
+### Installation
+```bash
+npm install
+```
+
+### Development Server
+Run the application locally:
+```bash
+npm start
+# or
+ng serve
+```
+
+### Build
+Generate a production build:
+```bash
+npm run build
+# or
+ng build
+```
+
+---
+
+## Testing Information
+
+This project uses **Vitest** as the test runner, integrated via the Angular build system (`@angular/build:unit-test`).
+
+### Running Tests
+To run tests once:
+```bash
+npm test -- --watch=false
+```
+
+To run tests in watch mode:
+```bash
+npm test
+```
+
+### Configuration
+Tests are configured via `tsconfig.spec.json` and `angular.json`. The project uses `jsdom` as the test environment.
+
+### Adding New Tests
+- Test files should be named with the `.spec.ts` suffix (e.g., `my-component.spec.ts`).
+- Since global Vitest types might not be automatically available in all environments, it is recommended to explicitly import test globals if IDE or CLI issues arise:
+  ```typescript
+  import { describe, it, expect, beforeEach } from 'vitest';
+  ```
+
+### Handling Environment/GSAP Issues
+Many components use **GSAP** and **ScrollTrigger**, which may require `window.matchMedia` to be mocked in the `jsdom` environment. If tests fail with `TypeError: _win.matchMedia is not a function`, ensure the test or a setup file mocks it:
+```typescript
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: (query: string) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: () => {},
+    removeListener: () => {},
+    addEventListener: () => {},
+    removeEventListener: () => {},
+    dispatchEvent: () => true,
+  }),
+});
+```
+
+---
+
+## Additional Development Information
+
+### Libraries
+- **GSAP**: Used for animations and scroll-based effects.
+- **Three.js**: Used for WebGL components.
+- **Lenis**: Used for smooth scrolling.
+- **NGX-Translate**: Used for internationalization.
+
+### Code Style
+- **Prettier**: The project uses Prettier for formatting. Configuration is located in `package.json`.
+  - `printWidth`: 100
+  - `singleQuote`: true
+- **Angular Style**: Strictly follows Angular's recommended component and file naming conventions.
+
+### Common Pitfalls
+- **Missing Providers**: When testing components that use `ActivatedRoute` or `TranslateService`, ensure the `TestBed` is configured with the necessary providers or mocks:
+  ```typescript
+  await TestBed.configureTestingModule({
+    imports: [MyComponent],
+    providers: [
+      { provide: ActivatedRoute, useValue: { params: of({}) } },
+      provideHttpClient(),
+      provideTranslateService()
+    ]
+  }).compileComponents();
+  ```
