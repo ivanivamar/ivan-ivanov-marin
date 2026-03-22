@@ -80,7 +80,6 @@ Object.defineProperty(window, 'matchMedia', {
 
 ### Libraries
 - **GSAP**: Used for animations and scroll-based effects.
-- **Three.js**: Used for WebGL components.
 - **Lenis**: Used for smooth scrolling.
 - **NGX-Translate**: Used for internationalization.
 
@@ -98,7 +97,36 @@ Object.defineProperty(window, 'matchMedia', {
     providers: [
       { provide: ActivatedRoute, useValue: { params: of({}) } },
       provideHttpClient(),
-      provideTranslateService()
+      provideTranslateService({
+          loader: provideTranslateHttpLoader(),
+          fallbackLang: 'en',
+          lang: 'en'
+      })
     ]
   }).compileComponents();
   ```
+
+### Example Test (Service)
+A simple service test to demonstrate the process:
+```typescript
+import { TestBed } from '@angular/core/testing';
+import { SimpleService } from './simple.service';
+import { describe, it, expect, beforeEach } from 'vitest';
+
+describe('SimpleService', () => {
+  let service: SimpleService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(SimpleService);
+  });
+
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+
+  it('should return a message', () => {
+    expect(service.getMessage()).toBe('Hello World');
+  });
+});
+```
