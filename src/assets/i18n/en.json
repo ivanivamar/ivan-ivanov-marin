@@ -21,7 +21,7 @@
 
     "work.caae.title": "Certification management app",
     "work.caae.desc": "Migration of a large and complex Windows Forms application to a modern Angular web application.",
-    "workk.caae.detail": "Migration of a Windows Forms application to a modern Angular web application. I worked on the migration of the application from .NET Framework to Angular/C#, and I also implemented the integration of SharePoint with the application. I also worked with the client to ensure the smooth migration of the application and lead my team of 5 people in the implementation of the new features.",
+    "work.caae.detail": "Migration of a Windows Forms application to a modern Angular web application. I worked on the migration of the application from .NET Framework to Angular/C#, and I also implemented the integration of SharePoint with the application. I also worked with the client to ensure the smooth migration of the application and lead my team of 5 people in the implementation of the new features.",
     "work.caae.duration": "1 Year",
     "work.provalliance.title": "Scheduler application",
     "work.provalliance.desc": "Scheduler Angular application for managing appointments and resources.",
