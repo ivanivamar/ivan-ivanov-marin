@@ -9,6 +9,19 @@
 
         @media (max-width: 1024px)
             padding-top: 30vh
+            padding-left: 5vw
+            padding-right: 5vw
+
+        section
+            display: flex
+            flex-direction: column
+            gap: 40vh
+            padding: 0
+            width: 100%
+            height: 100%
+
+            @media (max-width: 1024px)
+                gap: 15vh
 
         header
             position: fixed
@@ -22,6 +35,7 @@
             @media (max-width: 1024px)
                 top: 10vh
                 height: 15vh
+                width: 90vw
 
         .image-wrapper
             display: flex
@@ -33,6 +47,10 @@
             aspect-ratio: 16/9
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
             z-index: 1
+
+            @media (max-width: 1024px)
+                width: 90vw
+                max-width: none
 
             img
                 width: 100%
@@ -52,6 +70,10 @@
                     width: auto
                     height: 90%
 
+                    @media (max-width: 1024px)
+                        width: 90vw
+                        height: auto
+
             &.project-sener
                 // make a soft blue gradient
                 background: linear-gradient(135deg, #a0c4ff, #bdb2ff)
@@ -65,10 +87,13 @@
             grid-template-columns: 1fr 1fr
             gap: 10vw
             padding-top: 10vh
-            padding-bottom: 35vh
+            padding-bottom: 5vh
+            height: 70vh
 
             @media (max-width: 1024px)
                 grid-template-columns: 1fr
-                gap: 10vw
+                gap: 5vw
                 padding-top: 10vh
                 padding-bottom: 8vh
+                width: 90vw
+                height: 80vh

@@ -8,7 +8,7 @@ export class Project {
     description: string = '';
     descriptionDetail: string = '';
     duration: string = '';
-    image: string = '';
+    image: string[] = [];
     tools: string[] = [];
     roles: string[] = [];
 }
@@ -20,7 +20,7 @@ export const projects = signal<Project[]>([
         description: 'work.caae.desc',
         descriptionDetail: 'work.caae.detail',
         duration: 'work.caae.duration',
-        image: 'assets/projects/caae.png',
+        image: ['assets/projects/caae.png', 'assets/projects/caae2.png'],
         tools: ['Angular', 'TypeScript', 'SharePoint', 'C#'],
         roles: ['Tech Lead', 'Frontend', 'Backend']
     },
@@ -30,7 +30,7 @@ export const projects = signal<Project[]>([
         description: 'work.senner.desc',
         descriptionDetail: 'work.senner.detail',
         duration: 'work.senner.duration',
-        image: 'assets/projects/senner.png',
+        image: ['assets/projects/senner.png'],
         tools: ['Angular', 'TypeScript', 'Google Maps API', 'C#', 'MAUI'],
         roles: ['Tech Lead', 'Frontend', 'Backend']
     },
@@ -40,7 +40,7 @@ export const projects = signal<Project[]>([
         description: 'work.provalliance.desc',
         descriptionDetail: 'work.provalliance.detail',
         duration: 'work.provalliance.duration',
-        image: 'assets/projects/provalliance.png',
+        image: ['assets/projects/provalliance.png', 'assets/projects/provalliance2.png'],
         tools: ['Angular', 'TypeScript', 'DevExtreme', 'C#'],
         roles: ['Frontend']
     },

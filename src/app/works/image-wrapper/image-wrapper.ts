@@ -20,7 +20,7 @@ export const currentProject = signal<Project>({
     description: '',
     descriptionDetail: '',
     duration: '',
-    image: '',
+    image: [],
     tools: [],
     roles: []
 });

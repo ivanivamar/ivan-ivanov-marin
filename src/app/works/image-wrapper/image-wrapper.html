@@ -1,11 +1,11 @@
-<section class="flex flex-column h-auto" style="gap: 56vh">
+<section class="flex align-items-center md:align-items-start flex-column h-auto" style="gap: 56vh">
     @for (project of projects(); track $index) {
         <a
             [routerLink]="['/works/', project.title]"
             class="image-wrapper" [ngClass]="'project-' + project.title"
             #projectImage>
             <img
-                [src]="project.image"
+                [src]="project.image[0]"
                 [alt]="project.title"/>
         </a>
     }

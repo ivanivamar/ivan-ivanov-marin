@@ -6,6 +6,20 @@
     display: flex
     flex-direction: column
 
+    @media (max-width: 1024px)
+        width: 90vw
+        left: 5vw
+        top: 0
+
+    .title-container
+        height: 15vh
+
+    .details-container
+        margin-top: 14vh
+
+        @media (max-width: 1024px)
+            margin-top: 5vh
+
     .description-wrapper
         will-change: opacity, transform
 
