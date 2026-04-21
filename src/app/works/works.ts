@@ -11,6 +11,8 @@ export class Project {
     image: string[] = [];
     tools: string[] = [];
     roles: string[] = [];
+    url?: string;
+    github?: string;
 }
 
 export const projects = signal<Project[]>([
@@ -22,7 +24,9 @@ export const projects = signal<Project[]>([
         duration: 'work.wayfind.duration',
         image: ['assets/projects/wayfind.png', 'assets/projects/wayfind2.png'],
         tools: ['NextJS', 'Google Maps API', 'Firebase', 'Claude Design'],
-        roles: ['Design', 'Frontend', 'Backend']
+        roles: ['Design', 'Frontend', 'Backend'],
+        url: 'https://map-wayfind.web.app',
+        github: 'https://github.com/ivanivamar/wayfind'
     },
     {
         title: 'caae',

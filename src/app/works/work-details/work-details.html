@@ -8,9 +8,26 @@
         </a>
 
         <div class="flex flex-column gap-2">
-            <h1 class="subheadline uppercase md:text-6xl">
-                {{ project?.displayTitle | translate }}
-            </h1>
+            <div class="flex align-items-end justify-content-between w-full">
+                <h1 class="subheadline uppercase md:text-6xl">
+                    {{ project?.displayTitle | translate }}
+                </h1>
+
+                <div class="flex align-items-center gap-3">
+                    @if (project?.url) {
+                        <a [href]="project?.url" target="_blank" class="flex align-items-center gap-1">
+                            <i class="material-symbols-rounded pointer-events-none">open_in_new</i>
+                            {{ 'work.details.visit' | translate }}
+                        </a>
+                    }
+                    @if (project?.github) {
+                        <a [href]="project?.github" target="_blank" class="flex align-items-center gap-1">
+                            <i class="material-symbols-rounded pointer-events-none">code</i>
+                            {{ 'work.details.github' | translate }}
+                        </a>
+                    }
+                </div>
+            </div>
             <div class="divider w-full"></div>
         </div>
     </header>

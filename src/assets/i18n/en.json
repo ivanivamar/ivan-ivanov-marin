@@ -39,6 +39,8 @@
     "work.details.duration": "Duration",
     "work.details.roles": "Roles",
     "work.details.description": "Description",
+    "work.details.visit": "Visit",
+    "work.details.github": "GitHub",
 
     "skills.title": "SKILLS",
     "skills.frontend": "FRONTEND",
