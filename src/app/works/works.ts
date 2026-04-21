@@ -15,6 +15,16 @@ export class Project {
 
 export const projects = signal<Project[]>([
     {
+        title: 'wayfind',
+        displayTitle: 'work.wayfind.title',
+        description: 'work.wayfind.desc',
+        descriptionDetail: 'work.wayfind.detail',
+        duration: 'work.wayfind.duration',
+        image: ['assets/projects/wayfind.png', 'assets/projects/wayfind2.png'],
+        tools: ['NextJS', 'Google Maps API', 'Firebase', 'Claude Design'],
+        roles: ['Design', 'Frontend', 'Backend']
+    },
+    {
         title: 'caae',
         displayTitle: 'work.caae.title',
         description: 'work.caae.desc',
